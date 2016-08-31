@@ -4,11 +4,9 @@
 
 {% for post in posts %}
 <div class="subject">
-    {{post.subject}} ({{post.date}})
+    <a href="http://localhost:8080/{{ post.key().id() }}">{{post.subject}}</a> ({{post.date}})
 </div>
 <hr>
-<pre name="content">
-    {{post.content}}
-</pre>
+<pre name="content">{{post.content}}</pre>
 {% endfor %}
 {% endblock %}
