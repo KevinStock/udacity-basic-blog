@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+{% for post in posts %}
+<div class="subject">
+    {{post.subject}} ({{post.date}})
+</div>
+<hr>
+<pre name="content">
+    {{post.content}}
+</pre>
+{% endfor %}
+{% endblock %}
