@@ -1,10 +1,14 @@
 {% extends "layout.html" %}
 
 {% block content %}
-
-<div class="subject">
-    {{subject}} ({{date}})
+<div class="post">
+    <div class="post-title">
+        {{subject}}
+    </div>
+    <div class="post-date">
+        {{date}}
+    </div>
+    <hr>
+    <pre name="content">{{content}}</pre>
 </div>
-<hr>
-<pre name="content">{{content}}</pre>
 {% endblock %}

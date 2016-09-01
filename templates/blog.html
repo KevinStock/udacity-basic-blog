@@ -3,10 +3,15 @@
 {% block content %}
 
 {% for post in posts %}
-<div class="subject">
-    <a href="http://localhost:8080/{{ post.key().id() }}">{{post.subject}}</a> ({{post.date}})
+<div class="post">
+    <div class="post-title">
+        <a href="http://localhost:8080/{{ post.key().id() }}">{{post.subject}}</a>
+    </div>
+    <div class="post-date">
+        {{post.date}}
+    </div>
+    <hr>
+    <pre name="content">{{post.content}}</pre>
 </div>
-<hr>
-<pre name="content">{{post.content}}</pre>
 {% endfor %}
 {% endblock %}
